@@ -24,14 +24,13 @@ function isLikelyMobileOrTablet() {
   return false;
 }
 
-function FloatingPetals() {
+function MagicalLights() {
   const [isLowPowerMode, setIsLowPowerMode] = useState(false);
-  const [petals, setPetals] = useState<
+  const [lights, setLights] = useState<
     Array<{
       id: number;
       x: number;
       size: number;
-      rotation: number;
       duration: number;
       delay: number;
       color: string;
@@ -45,24 +44,23 @@ function FloatingPetals() {
     setIsLowPowerMode(reduceMotion || isMobile);
 
     if (reduceMotion) {
-      setPetals([]);
+      setLights([]);
       return;
     }
 
-    const colors = ["#ff0080", "#ff8c00", "#ffd700", "#00ffff", "#8a2be2", "#ffffff"];
-    const petalCount = isMobile ? 15 : 25;
-    const newPetals = Array.from({ length: petalCount }).map((_, i) => ({
+    const colors = ["#d4af37", "#f7e7ce", "#ffdf00", "#ffffff", "#c5a059"];
+    const lightCount = isMobile ? 25 : 50;
+    const newLights = Array.from({ length: lightCount }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
-      size: Math.random() * 8 + 6,
-      rotation: Math.random() * 360,
-      duration: Math.random() * 12 + 14,
+      size: Math.random() * 4 + 2,
+      duration: Math.random() * 15 + 15,
       delay: Math.random() * 20,
       color: colors[Math.floor(Math.random() * colors.length)],
-      drift: Math.random() * 30 - 15,
+      drift: Math.random() * 20 - 10,
     }));
 
-    setPetals(newPetals);
+    setLights(newLights);
   }, []);
 
   return (
@@ -70,40 +68,35 @@ function FloatingPetals() {
       className={`pointer-events-none fixed inset-0 overflow-hidden z-40 ${isLowPowerMode ? "opacity-70" : ""
         }`}
     >
-      {petals.map((petal) => (
+      {lights.map((light) => (
         <motion.div
-          key={petal.id}
-          className="absolute drop-shadow-[0_2px_6px_rgba(227,207,172,0.4)]"
-          style={{ color: petal.color }}
+          key={light.id}
+          className="absolute rounded-full"
+          style={{ 
+            backgroundColor: light.color, 
+            width: light.size, 
+            height: light.size,
+            boxShadow: `0 0 ${light.size * 2}px ${light.color}, 0 0 ${light.size * 4}px ${light.color}`
+          }}
           initial={{
-            x: `${petal.x}vw`,
-            y: "-10vh",
-            rotate: petal.rotation,
+            x: `${light.x}vw`,
+            y: "110vh",
             opacity: 0,
+            scale: 0,
           }}
           animate={{
-            y: "110vh",
-            x: `${petal.x + petal.drift}vw`,
-            rotate: petal.rotation + (isLowPowerMode ? 360 : 720),
-            opacity: [0, 0.9, 0.8, 0],
+            y: "-10vh",
+            x: `${light.x + light.drift}vw`,
+            opacity: [0, 0.8, 1, 0.8, 0],
+            scale: [0, 1, 1.2, 1, 0],
           }}
           transition={{
-            duration: isLowPowerMode ? petal.duration * 1.2 : petal.duration,
+            duration: isLowPowerMode ? light.duration * 1.2 : light.duration,
             repeat: Infinity,
-            delay: petal.delay,
-            ease: "linear",
+            delay: light.delay,
+            ease: "easeInOut",
           }}
-        >
-          <svg
-            width={petal.size}
-            height={petal.size}
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="drop-shadow-sm"
-          >
-            <path d="M12,2C12,2 10,6 10,10C10,14 12,22 12,22C12,22 14,14 14,10C14,6 12,2 12,2Z" />
-          </svg>
-        </motion.div>
+        />
       ))}
     </div>
   );
@@ -712,7 +705,7 @@ export default function WeddingInvitation() {
         : "h-[100dvh] overflow-hidden flex items-center justify-center"
         } relative font-montserrat scroll-smooth`}
     >
-      <FloatingPetals />
+      <MagicalLights />
 
       <AnimatePresence mode="wait">
         {!isOpened ? (
