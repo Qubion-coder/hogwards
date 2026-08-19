@@ -766,6 +766,14 @@ export default function WeddingInvitation() {
                     e.stopPropagation();
                     setIsVideoPlaying(true);
                     videoRef.current?.play();
+                    if (audioRef.current) {
+                      audioRef.current.currentTime = 0;
+                      audioRef.current.muted = false;
+                      audioRef.current.volume = 1;
+                      audioRef.current.play().catch(console.error);
+                      setMusicAudible(true);
+                      audioUnlockedRef.current = true;
+                    }
                     void unlockAudioFromGesture();
                   }}
                   className="px-8 py-4 bg-[#4e342e] text-[#f7e7ce] rounded-full font-cinzel tracking-[0.2em] text-[10px] md:text-sm uppercase shadow-2xl hover:bg-[#3e2723] transition-all border border-[#d4af37]/30 hover:scale-105 mt-4"
