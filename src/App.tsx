@@ -10,8 +10,7 @@ import { useInView } from 'react-intersection-observer';
  * Accents: Brown/Brown
  */
 
-const brideGroomImage = "/pre/img1.jpeg";
-const secondaryImage = "/pre/img2.jpeg";
+const brideGroomImage = "/WhatsApp Image 2026-09-02 at 02.26.22.jpeg";
 const backgroundMusic = "/Harry_Potter_-_Theme_Song_Hedwig_s_Theme_(mp3.pm).mp3";
 const googleScriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL?.trim() || "";
 
@@ -204,7 +203,7 @@ function CountdownTimer() {
             <Sparkles className="h-4 w-4 text-[#d4af37]" />
           </motion.div>
 
-          <h2 className="font-alex text-6xl md:text-[8rem] leading-tight text-white drop-shadow-xl">
+          <h2 className="font-alex text-5xl sm:text-6xl md:text-[8rem] leading-tight text-white drop-shadow-xl">
             Counting Down to <span className="relative inline-block text-shimmer">
               Forever
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
@@ -229,8 +228,8 @@ function CountdownTimer() {
           </p>
         </motion.div>
 
-        <div className="w-full rounded-[2.5rem] border border-[#d4af37]/30 bg-black/20 p-4 shadow-[0_30px_90px_rgba(0,0,0,0.5)] backdrop-blur-2xl sm:p-6 md:p-8">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+        <div className="w-full rounded-3xl md:rounded-[2.5rem] border border-[#d4af37]/30 bg-black/20 p-3 sm:p-4 shadow-[0_30px_90px_rgba(0,0,0,0.5)] backdrop-blur-2xl md:p-8">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-8">
             {countdownItems.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -245,7 +244,7 @@ function CountdownTimer() {
                 whileHover={{ y: -10, scale: 1.05 }}
                 className="group relative"
               >
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_15px_35px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:border-[#d4af37]/40 group-hover:bg-white/10 md:p-8">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-[2rem] border border-white/10 bg-white/5 p-2 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:border-[#d4af37]/40 group-hover:bg-white/10 md:p-8">
                   <div className="absolute inset-0 opacity-[0.1]"
                     style={{
                       backgroundImage:
@@ -254,11 +253,11 @@ function CountdownTimer() {
                     }}
                   />
 
-                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-[#d4af37]/20" />
-                  <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-[#d4af37]/10" />
+                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-[#d4af37]/20 hidden sm:block" />
+                  <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-[#d4af37]/10 hidden sm:block" />
 
                   <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                    <div className="relative flex h-[64px] w-full items-center justify-center overflow-hidden sm:h-[78px] md:h-[96px]">
+                    <div className="relative flex h-[36px] w-full items-center justify-center overflow-hidden sm:h-[64px] md:h-[96px]">
                       <AnimatePresence mode="popLayout">
                         <motion.span
                           key={item.value}
@@ -271,15 +270,15 @@ function CountdownTimer() {
                             damping: 24,
                             mass: 1
                           }}
-                          className="absolute font-serif text-5xl font-semibold text-[#f7e7ce] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] sm:text-6xl md:text-7xl"
+                          className="absolute font-serif text-2xl font-semibold text-[#f7e7ce] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] sm:text-5xl md:text-7xl"
                         >
                           {String(item.value).padStart(2, '0')}
                         </motion.span>
                       </AnimatePresence>
                     </div>
 
-                    <div className="mt-3 rounded-full border border-[#d4af37]/40 bg-black/40 px-3 py-1.5 shadow-sm md:mt-5">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#d4af37] md:text-xs">
+                    <div className="mt-2 sm:mt-3 rounded-full border border-[#d4af37]/40 bg-black/40 px-1.5 sm:px-3 py-1 sm:py-1.5 shadow-sm md:mt-5">
+                      <p className="text-[7px] sm:text-[10px] font-bold uppercase tracking-[0.1em] sm:tracking-[0.22em] text-[#d4af37] md:text-xs">
                         {item.label}
                       </p>
                     </div>
@@ -891,29 +890,6 @@ export default function WeddingInvitation() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                     </motion.div>
 
-                    {/* Overlapping Secondary Image - 'Cute' feel */}
-                    <motion.div
-                      initial={{ opacity: 0, x: -30, y: 30, rotate: -5 }}
-                      whileInView={{ opacity: 1, x: 0, y: 0, rotate: -8 }}
-                      transition={{ delay: 0.8, duration: 1.2 }}
-                      viewport={{ once: true }}
-                      whileHover={{ rotate: -5, scale: 1.05 }}
-                      className="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-12 w-[60%] aspect-[4/5] bg-white p-2 rounded-xl shadow-2xl z-20 border border-[#d4af37]/30"
-                    >
-                      <img
-                        src={secondaryImage}
-                        alt="The Couple"
-                        loading="lazy"
-                        decoding="async"
-                        width={300}
-                        height={400}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                      {/* Floating Sparkle on the corner for 'Premium' feel */}
-                      <div className="absolute -top-3 -right-3 text-[#d4af37] animate-pulse">
-                        <Sparkles size={20} />
-                      </div>
-                    </motion.div>
                   </div>
 
                   {/* Minimalist Names side */}
@@ -1099,7 +1075,7 @@ export default function WeddingInvitation() {
 
                     <div className="w-full flex flex-col items-center mt-6 relative z-10 px-2 md:px-6">
                       <p className="font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-medium mb-2 text-center leading-relaxed">
-                        RSVP - Shammi 077 909 0515 | Vikum 076 850 4398
+                        RSVP - Vikum +44 7397 738800 | Shammi +94 70 464 4005
                       </p>
 
                       <div className="flex items-center justify-center gap-4 w-full mb-8">
@@ -1414,7 +1390,6 @@ export default function WeddingInvitation() {
       `,
         }}
       />
-      <AdminPanel />
       <AnimatePresence>
         {isAccommodationOpen && (
           <AccommodationModal
@@ -1427,120 +1402,4 @@ export default function WeddingInvitation() {
   );
 }
 
-function AdminPanel() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [name, setName] = useState("");
-  const [prefix, setPrefix] = useState("Mr. & Mrs.");
-  const [generatedLink, setGeneratedLink] = useState("");
-  const [copied, setCopied] = useState(false);
-  const [baseUrl, setBaseUrl] = useState(window.location.origin);
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("admin") === "true") {
-      setIsVisible(true);
-    }
-  }, []);
-
-  const generateLink = () => {
-    const fullName = prefix === "None" ? name : `${prefix} ${name}`;
-    const urlSafeName = fullName.trim().replace(/\s+/g, "_");
-    const link = `${baseUrl}?to=${urlSafeName}`;
-    setGeneratedLink(link);
-    setCopied(false);
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(generatedLink);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed top-4 left-4 z-[200] max-w-sm w-full bg-white/90 backdrop-blur-xl border border-theme-200 rounded-2xl shadow-2xl p-6 font-montserrat animate-in fade-in slide-in-from-left-4 duration-500">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="font-cinzel font-bold text-theme-800 text-sm tracking-widest uppercase">
-          Invitation Manager
-        </h2>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-stone-400 hover:text-stone-600 transition-colors"
-        >
-          <VolumeX className="w-4 h-4 rotate-45" />
-        </button>
-      </div>
-
-      <div className="space-y-4">
-        <div>
-          <label className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1 block">
-            Base Hosted Link
-          </label>
-          <input
-            type="text"
-            value={baseUrl}
-            onChange={(e) => setBaseUrl(e.target.value)}
-            placeholder="https://your-wedding-site.com"
-            className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-xs text-stone-700 focus:outline-none focus:ring-1 focus:ring-theme-400"
-          />
-        </div>
-
-        <div>
-          <label className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1 block">
-            Prefix
-          </label>
-          <select
-            value={prefix}
-            onChange={(e) => setPrefix(e.target.value)}
-            className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-xs text-stone-700 focus:outline-none focus:ring-1 focus:ring-theme-400"
-          >
-            <option>Mr. & Mrs.</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
-            <option>Miss</option>
-            <option>Family</option>
-            <option>Dear</option>
-            <option>None</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1 block">
-            Guest Name
-          </label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="John Doe"
-            className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-xs text-stone-700 focus:outline-none focus:ring-1 focus:ring-theme-400"
-          />
-        </div>
-
-        <button
-          onClick={generateLink}
-          className="w-full bg-[#4e342e] text-white py-3 rounded-xl font-bold text-[10px] tracking-widest uppercase hover:bg-[#5d4037] transition-all"
-        >
-          Generate Personalized Link
-        </button>
-
-        {generatedLink && (
-          <div className="mt-4 p-3 bg-stone-50 rounded-xl border border-stone-100 flex flex-col gap-2">
-            <p className="text-[9px] text-stone-500 break-all font-mono">{generatedLink}</p>
-            <button
-              onClick={copyToClipboard}
-              className="flex items-center justify-center gap-2 bg-theme-100 text-theme-800 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest hover:bg-theme-200 transition-all"
-            >
-              {copied ? "Copied!" : "Copy Link"}
-            </button>
-          </div>
-        )}
-      </div>
-
-      <p className="mt-4 text-[9px] text-stone-400 leading-relaxed">
-        Tip: Add <span className="font-bold">?admin=true</span> to any URL to open this menu again.
-      </p>
-    </div>
-  );
-}
