@@ -420,11 +420,11 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
                       </div>
 
                       <h2 className="mt-5 font-serif text-4xl font-light tracking-[0.08em] text-[#2e1c14]">
-                        SHAMMI
+                        NETHMA
                       </h2>
                       <p className="mt-1 font-serif text-lg italic text-[#b08a1f]">&</p>
                       <h2 className="font-serif text-4xl font-light tracking-[0.08em] text-[#2e1c14]">
-                        VIKUM
+                        HASITH
                       </h2>
 
                       <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-[#5f5146]">
@@ -438,7 +438,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
                       </div>
 
                       <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-[#8c6a16]">
-                        December 11, 2026
+                        January 15, 2027
                       </p>
                     </div>
                   </div>

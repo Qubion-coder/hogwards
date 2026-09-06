@@ -29,7 +29,7 @@ export default function AdminPage() {
   };
 
   const getMessageText = () => {
-    return `Dear ${prefix === "None" ? "" : prefix} ${name} ❤️\n\nWith joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.\n\nPlease view our wedding invitation and all the event details through the link below 🌐:\n\n${generatedLink}\n\nYour presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.\n\nWith love,\n❤️ Vikum & Shammi`;
+    return `Dear ${prefix === "None" ? "" : prefix} ${name} ❤️\n\nWith joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.\n\nPlease view our wedding invitation and all the event details through the link below 🌐:\n\n${generatedLink}\n\nYour presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.\n\nWith love,\n❤️ Hasith & Nethma`;
   };
 
   const copyFullMessage = () => {

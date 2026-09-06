@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 /**
  * Premium Sri Lankan Wedding Invitation Theme
- * Names: Shammi & Vikum
+ * Names: Nethma & Hasith
  * Background: Cream/Sand
  * Accents: Brown/Brown
  */
@@ -107,7 +107,7 @@ function CountdownTimer() {
     triggerOnce: true,
   });
 
-  const targetDate = useMemo(() => new Date("December 11, 2026 10:13:00").getTime(), []);
+  const targetDate = useMemo(() => new Date("January 15, 2027 10:13:00").getTime(), []);
 
   const getTimeLeft = (): { days: number; hours: number; minutes: number; seconds: number } => {
     const now = new Date().getTime();
@@ -745,9 +745,9 @@ export default function WeddingInvitation() {
                 >
                   <p className="text-[#f7e7ce] font-cinzel text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4 drop-shadow-md">The Wedding Invitation</p>
                   <h1 className="text-[#f7e7ce] font-alex text-[3.5rem] leading-[1.1] md:text-7xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4">
-                    <span>Shammi</span>
-                    <span className="font-serif text-2xl md:text-3xl italic text-[#d4af37] my-1 md:my-0">&amp;</span>
-                    <span>Vikum</span>
+                    <span>Nethma</span>
+                    <span className="text-xl md:text-3xl text-[#4e342e]/60 font-light italic">&</span>
+                    <span>Hasith</span>
                   </h1>
                 </motion.div>
                 <motion.button
@@ -802,8 +802,8 @@ export default function WeddingInvitation() {
             <section className="relative z-10 w-full min-h-[95dvh] md:min-h-[100dvh] bg-[#3e2723] flex items-center justify-center overflow-hidden">
               <img 
                 src="/hero.png" 
-                alt="Shammi & Vikum"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                alt="Nethma & Hasith"
+                className="absolute inset-0 w-full h-full object-contain md:object-cover object-center"
               />
               <motion.div
                 initial={{ opacity: 0 }}
@@ -880,7 +880,7 @@ export default function WeddingInvitation() {
                     >
                       <img
                         src={brideGroomImage}
-                        alt="Shammi & Vikum"
+                        alt="Nethma & Hasith"
                         loading="lazy"
                         decoding="async"
                         width={450}
@@ -900,31 +900,34 @@ export default function WeddingInvitation() {
                     transition={{ duration: 1.2, delay: 0.2 }}
                     className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-10 z-20 w-full"
                   >
-                    <div className="w-full flex justify-center md:justify-start overflow-hidden">
-                      <h3 className="text-[3.5rem] sm:text-6xl md:text-[8rem] lg:text-[9rem] font-alex text-gold-gradient leading-none drop-shadow-sm px-2 pb-2">
-                        Shammi
-                      </h3>
+                    <div className="w-full flex flex-col items-center md:items-start gap-3">
+                      <div className="text-5xl md:text-6xl font-playball tracking-wider text-[#4e342e]">
+                        Nethma
+                      </div>
+                      <div className="flex flex-col items-center md:items-start gap-1">
+                        <span className="font-cinzel text-[9px] md:text-[10px] text-[#b08a1f] tracking-[0.2em] uppercase">Loving Daughter of</span>
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-widest text-slate-500 uppercase text-center md:text-left">
+                          Mr. Sagara Senanayake <span className="hidden md:inline">&amp;</span><br className="md:hidden" /><span className="md:hidden">&amp;</span> Mrs. Manel Senanayake
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex items-center gap-4 w-full justify-center md:justify-start px-4 md:pl-6">
+                    <div className="flex items-center gap-4 w-full justify-center md:justify-start px-4 md:pl-6 my-2">
                       <div className="h-[0.5px] flex-1 max-w-[40px] bg-[#d4af37]/40" />
-                      <span className="font-serif text-2xl md:text-6xl text-slate-400 italic font-light">&</span>
+                      <p className="font-serif text-xl md:text-2xl italic text-[#b08a1f]">&</p>
                       <div className="h-[0.5px] flex-1 max-w-[40px] bg-[#d4af37]/40" />
                     </div>
 
-                    <div className="w-full flex justify-center md:justify-start overflow-hidden">
-                      <h3 className="text-[3.5rem] sm:text-6xl md:text-[8rem] lg:text-[9rem] font-alex text-gold-gradient leading-none drop-shadow-sm px-2 pt-2">
-                        Vikum
-                      </h3>
-                    </div>
-
-                    <div className="pt-6 md:pt-8 w-full">
-                      <p className="font-montserrat text-[8px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-bold text-center md:text-left leading-relaxed px-2">
-                        Loving Daughter of Mr. Deva Pradeep Nadhun Dharmawickrama & Mrs. Dehinga Sherene Thabrew
-                      </p>
-                      <p className="font-montserrat text-[8px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-bold text-center md:text-left leading-relaxed px-2">
-                        Loving Son of Mr. Hewadewage Sarath Weerasinghe & Mrs. Hewadewage Kamani Yamuna Kumari Mel
-                      </p>
+                    <div className="w-full flex flex-col items-center md:items-start gap-3">
+                      <div className="text-5xl md:text-6xl font-playball tracking-wider text-[#4e342e]">
+                        Hasith
+                      </div>
+                      <div className="flex flex-col items-center md:items-start gap-1">
+                        <span className="font-cinzel text-[9px] md:text-[10px] text-[#b08a1f] tracking-[0.2em] uppercase">Loving Son of</span>
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-widest text-slate-500 uppercase text-center md:text-left">
+                          Mr. Priyantha Dissanayake <span className="hidden md:inline">&amp;</span><br className="md:hidden" /><span className="md:hidden">&amp;</span> Mrs. Nelum Dissanayake
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
@@ -955,10 +958,10 @@ export default function WeddingInvitation() {
                         </span>
                       </div>
                       <h2 className="font-cinzel text-[2.5rem] md:text-[4rem] text-[#4e342e] leading-tight tracking-widest font-bold uppercase">
-                        Paradise Inn Bolgoda
+                        Hilton Colombo
                       </h2>
                       <p className="font-playball text-3xl md:text-5xl text-[#4e342e] italic mt-2">
-                        Crystal Atrium
+                        Main Ballroom
                       </p>
                     </div>
 
@@ -966,18 +969,18 @@ export default function WeddingInvitation() {
                       <div className="flex items-start gap-4">
                         <MapPin className="w-5 h-5 text-[#4e342e] mt-1 shrink-0" />
                         <p className="text-lg md:text-xl text-[#4e342e] font-cinzel leading-relaxed tracking-wide uppercase">
-                          Paradise Inn Bolgoda, Crystal Atrium.
+                          Hilton Colombo.
                         </p>
                       </div>
                       <p className="text-[#4e342e]/70 text-sm md:text-base tracking-widest uppercase font-light leading-loose">
-                        (Poruwa Ceremony at 10.13 AM) FRIDAY, 11 DECEMBER 2026. Registration at 9.02 AM.
+                        (Poruwa Ceremony at 10.13 AM) FRIDAY, 15 JANUARY 2027. Registration at 9.02 AM.
                       </p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
                         onClick={() =>
-                          window.open("https://maps.app.goo.gl/unygqW4e3i385R3q7?g_st=ic", "_blank")
+                          window.open("https://maps.app.goo.gl/4cMRjcKXz3jzJSnG6", "_blank")
                         }
                         className="group relative inline-flex items-center justify-center gap-4 px-10 py-5 bg-[#4e342e] text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden transition-all hover:bg-[#5d4037]"
                       >
@@ -997,7 +1000,7 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-2 border-[0.5px] border-[#4e342e]/30 pointer-events-none z-20" />
                     <div className="w-full h-full overflow-hidden bg-white relative">
                       <iframe
-                        src="https://maps.google.com/maps?q=Paradise%20Inn%20Bolgoda&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=Hilton%20Colombo&t=&z=16&ie=UTF8&iwloc=B&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -1075,7 +1078,7 @@ export default function WeddingInvitation() {
 
                     <div className="w-full flex flex-col items-center mt-6 relative z-10 px-2 md:px-6">
                       <p className="font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-medium mb-2 text-center leading-relaxed">
-                        RSVP - Vikum +44 7397 738800 | Shammi +94 70 464 4005
+                        RSVP - Hasith +44 7397 738800 | Nethma +94 70 464 4005
                       </p>
 
                       <div className="flex items-center justify-center gap-4 w-full mb-8">
@@ -1311,18 +1314,18 @@ export default function WeddingInvitation() {
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mt-4">
                       <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] leading-none">
-                        Shammi
+                        Nethma
                       </h2>
                       <span className="font-serif text-3xl md:text-5xl text-[#d4af37] italic opacity-80 drop-shadow-md pb-2">&</span>
                       <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] leading-none">
-                        Vikum
+                        Hasith
                       </h2>
                     </div>
                   </motion.div>
 
                   <div className="mt-20 pt-8 border-t-[0.5px] border-[#d4af37]/30 w-full max-w-xs md:max-w-md flex flex-col items-center gap-4">
                     <p className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.6em] text-[#f7e7ce]/50 font-bold leading-relaxed flex flex-col md:flex-row items-center gap-2 md:gap-4">
-                      <span>© 2026 Shammi & Vikum</span>
+                      <span>© 2027 Nethma & Hasith</span>
                       <span className="hidden md:inline text-[#d4af37]/30">|</span>
                       <span>All Rights Reserved</span>
                     </p>
