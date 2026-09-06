@@ -1078,7 +1078,7 @@ export default function WeddingInvitation() {
 
                     <div className="w-full flex flex-col items-center mt-6 relative z-10 px-2 md:px-6">
                       <p className="font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-medium mb-2 text-center leading-relaxed">
-                        RSVP - Hasith +44 7397 738800 | Nethma +94 70 464 4005
+                        RSVP - Hasith [Your Number] | Nethma [Your Number]
                       </p>
 
                       <div className="flex items-center justify-center gap-4 w-full mb-8">
